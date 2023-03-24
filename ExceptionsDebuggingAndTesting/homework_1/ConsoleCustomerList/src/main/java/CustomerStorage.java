@@ -56,7 +56,7 @@ public class CustomerStorage {
 class AddCustomerException extends RuntimeException {
     public AddCustomerException(String msg) {
 
-        System.out.println("Неверное добавление Customer" + msg);
+        System.out.println("Неверное добавление " + msg);
     }
 }
 
