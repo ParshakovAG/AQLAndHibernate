@@ -17,7 +17,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-        logger = LogManager.getRootLogger();
         Scanner scanner = new Scanner(System.in);
         CustomerStorage executor = new CustomerStorage();
 
@@ -48,6 +47,7 @@ public class Main {
             } catch (WrongCustomerEmail e) {
                 e.printStackTrace();
             }
+            logger = LogManager.getRootLogger();
         }
     }
 }
