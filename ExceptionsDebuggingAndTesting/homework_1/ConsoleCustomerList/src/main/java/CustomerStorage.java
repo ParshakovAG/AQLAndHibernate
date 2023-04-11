@@ -1,6 +1,3 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -12,8 +9,6 @@ public class CustomerStorage {
         storage = new HashMap<>();
     }
 
-    private static Logger logger;
-
     public void addCustomer(String data) {
         final int INDEX_NAME = 0;
         final int INDEX_SURNAME = 1;
@@ -22,7 +17,6 @@ public class CustomerStorage {
 
         final String phoneMatches = "(\\+*)\\d{11}";
         final String emailMatches = "\\D+@\\D+\\.\\D+";
-        logger = LogManager.getRootLogger();
 
         String[] components = data.split("\\s+");
         if (components.length != 4)
@@ -32,7 +26,6 @@ public class CustomerStorage {
             throw new WrongCustomerPhone(message);
         if (!components[INDEX_EMAIL].matches(emailMatches))
             throw new WrongCustomerEmail(message);
-        logger.error(message);
 
         storage.put(name, new Customer(name, components[INDEX_PHONE], components[INDEX_EMAIL]));
     }

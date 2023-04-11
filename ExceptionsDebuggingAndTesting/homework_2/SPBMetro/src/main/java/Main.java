@@ -11,8 +11,8 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class Main {
     private static final String DATA_FILE = "src/main/resources/map.json";
@@ -27,10 +27,10 @@ public class Main {
     public static void main(String[] args) {
         RouteCalculator calculator = getRouteCalculator();
 
-//        loggerRoot = LogManager.getRootLogger(); //Text info in console about LOGs manage
-//        loggerSearchSaver = LogManager.getLogger("SearchSaver");
-//        loggerInputErrors = LogManager.getLogger("InputErrorsLogger");
-//        loggerExceptions = LogManager.getLogger("ExceptionsLogger");
+        loggerRoot = LogManager.getRootLogger(); //Text info in console about LOGs manage
+        loggerSearchSaver = LogManager.getLogger("SearchSaver");
+        loggerInputErrors = LogManager.getLogger("InputErrorsLogger");
+        loggerExceptions = LogManager.getLogger("ExceptionsLogger");
 
         System.out.println("Программа расчёта маршрутов метрополитена Санкт-Петербурга\n");
         scanner = new Scanner(System.in);
