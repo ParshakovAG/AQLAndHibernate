@@ -24,6 +24,7 @@ public class Main {
 
         while (true) {
             String command = scanner.nextLine();
+
             logger.info(INPUT_HISTORY_MARKER, "Пользователь ввёл: " + command);
 
             try {
