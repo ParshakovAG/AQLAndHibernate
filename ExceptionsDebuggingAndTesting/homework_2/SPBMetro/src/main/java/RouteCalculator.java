@@ -97,6 +97,9 @@ public class RouteCalculator {
                 }
             }
         }
+        if (route.isEmpty()) {
+            return null;
+        }
         return route;
     }
 
@@ -145,7 +148,6 @@ public class RouteCalculator {
                 }
             }
         }
-
         return route;
     }
 }
