@@ -47,13 +47,13 @@ public class Main {
             }
 
             } catch (AddCustomerException e) {
+                logger.error(INVALID_COMMAND, "Неверный ввод, воспользуйтесь командой \"help\"");
                 e.printStackTrace();
             } catch (WrongCustomerPhone e) {
                 e.printStackTrace();
             } catch (WrongCustomerEmail e) {
                 e.printStackTrace();
             }
-            logger.error(INVALID_COMMAND, "Неверный ввод, воспользуйтесь командой \"help\"");
         }
     }
 }
